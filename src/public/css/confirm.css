@@ -1,0 +1,78 @@
+.confirm__title {
+    margin: 0 auto;
+    padding: 30px 15px;
+    text-align: center;
+    max-width: 1500px;
+}
+
+.confirm-form {
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
+
+.confirm__group {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.confirm__group-title {
+    width: 300px;
+    text-align: start;
+}
+
+.confirm__label--item {
+    display: inline-block;
+    font-weight: bold;
+    width: 300px;
+}
+
+.confirm-content__text input {
+    width: 500px;
+    outline: none;
+    border: none;
+}
+
+.confirm-content__textarea {
+    width: 500px;
+    height: 150px;
+    outline: none;
+    border: none;
+}
+
+.confirm-content__textarea textarea {
+    width: 500px;
+    height: 150px;
+    outline: none;
+    border: none;
+}
+
+.confirm__name {
+    display: flex;
+    padding-right: 250px;
+}
+
+.confirm__name input {
+    width: 50px;
+}
+
+.form__button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.form__button-submit {
+    padding: 10px;
+    width: 25%;
+    font-size: 20px;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.revise__form {
+    text-align: center;
+}

@@ -1,0 +1,19 @@
+.thanks__content {
+    text-align: center;
+    margin-top: 300px;
+}
+
+.thanks__title {
+    margin-bottom: 50px;
+}
+
+.return__button-submit {
+    padding: 10px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
