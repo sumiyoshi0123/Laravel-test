@@ -99,7 +99,7 @@
                 <button class="form__button-submit" type="submit">送信</button>
             </div>
             <div class="revise__form">
-                <a href="/">修正する</a>
+                <button class="revise__form" name="back" value="true" type="submit">修正する</button>
             </div>
         </form>
     </main>

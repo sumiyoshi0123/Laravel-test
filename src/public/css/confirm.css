@@ -27,6 +27,10 @@
     width: 300px;
 }
 
+.confirm-content__text {
+    display: flex;
+}
+
 .confirm-content__text input {
     width: 500px;
     outline: none;

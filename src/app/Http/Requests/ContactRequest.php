@@ -40,6 +40,7 @@ class ContactRequest extends FormRequest
         'familyname.required' => '姓を入力してください',
         'name.required' => '名前を入力してください',
         'email.required' => 'メールアドレスを入力してください',
+        'email.email' => '正しいメールアドレスを記入してください',
         'postcode.required' => '郵便番号を
         入力してください',
         'postcode.max' => '正しい郵便番号を入力してください',

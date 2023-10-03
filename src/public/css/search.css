@@ -1,0 +1,28 @@
+.search__form-title {
+    text-align: center;
+}
+
+.form__group-title {
+    font-weight: bold;
+    display: inline-block;
+}
+
+.form__group-content {
+    display: inline-block;
+}
+
+.form__input--radio {
+    display: inline-block;
+}
+
+.form__group-gender {
+    display: flex;
+}
+
+.form__button {
+    text-align: center;
+}
+
+.reset__button {
+    text-align: center;
+}
