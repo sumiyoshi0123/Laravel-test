@@ -30,11 +30,11 @@
             <div class="from__group-content">
                 <div class="form__input--radio">
                     <label class="select-gender">
-                        <input type="radio" name="gender" value="全て" checked/>
+                        <input type="radio" name="gender_all" value="全て" checked/>
                         <span class="gender">全て</span>
-                        <input type="radio" name="gender" value="男性" />
+                        <input type="radio" name="gender_male" value="男性" />
                         <span class="gender">男性</span>
-                        <input type="radio" name="gender" value="女性" />
+                        <input type="radio" name="gender_female" value="女性" />
                         <span class="gender">女性</span>
                     </label>
                 </div>
@@ -64,8 +64,9 @@
             <a href="/contacts/search">リセット</a>
         </div>
     </form>
+    {{ $contacts->links()}}
     <table class="form__data">
-        <tr>
+        <tr class="from__data-title">
             <th>ID</th>
             <th>苗字</th>
             <th>名前</th>
@@ -74,13 +75,23 @@
             <th>ご意見</th>
         </tr>
         @foreach($contacts as $contact)
-            <tr>
+            <tr class="form__data-item">
                 <td>{{$contact->id}}</td>
                 <td>{{$contact->familyname}}</td>
                 <td>{{$contact->name}}</td>
                 <td>{{$contact->gender}}</td>
                 <td>{{$contact->email}}</td>
                 <td>{{$contact->option}}</td>
+                <td>
+                    <form class="delete__form" action="/contacts/delete/" method="post">
+                    @method('delete')
+                    @csrf
+                        <div class="delete__button">
+                            <input type="hidden" name="id" value="{{ $contact['id'] }}">
+                            <button class="delete__button-submit" type="submit">削除</button>
+                        </div>
+                    </form>
+                </td>
             </tr>
         @endforeach
     </table>

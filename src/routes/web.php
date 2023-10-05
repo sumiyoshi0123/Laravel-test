@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SessionController;
+use App\Models\Contact;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,4 @@ Route::get('/', [ContactController::class, 'index']);
 Route::get('/contacts/search', [ContactController::class, 'search']);
 Route::post('/contacts/confirm', [ContactController::class, 'confirm']);
 Route::post('/contacts', [ContactController::class, 'store']);
+Route::delete('/contacts/delete',[ContactController::class, 'destroy']);

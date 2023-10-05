@@ -37,17 +37,15 @@ class ContactController extends Controller
 
     public function search (Request $request)
     {
-        $keyword = $request->input('keyword');
+        $contacts = Contact::NameSearch($request->keyword)->EmailSearch($request->email)->get();
 
-        $query = Contact::query();
+        $contacts = Contact::Paginate(10);
+        return view ('search', compact('contacts'));
+    }
 
-        if(!empty($keyword)) {
-            $query->where('familyname','LIKE', "%{$keyword}")
-            ->orWhere('name', 'LIKE', "%{$keyword}");
-        }
-
-        $contacts = $query->get();
-
-        return view ('search', compact('contacts', 'keyword'));
+    public function destroy (Request $request)
+    {
+        Contact::find($request->id)->delete();
+        return redirect('/contacts/search');
     }
 }

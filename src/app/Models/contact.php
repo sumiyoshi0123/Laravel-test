@@ -23,4 +23,19 @@ class Contact extends Model
     static $genders = [
         '男性', '女性'
     ];
+
+    public function scopeNameSearch($query,$keyword)
+    {
+        if (!empty($keyword)) {
+            $query->where('familyname', 'like','%' . $keyword.'%')
+            ->orWhere('name', 'like', '%'.$keyword.'%');
+        }
+    }
+
+    public function scopeEmailSearch($query,$email)
+    {
+        if(!empty($email)) {
+            $query->where('email','like','%' .$email . '%');
+        }
+    }
 }
